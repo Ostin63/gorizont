@@ -1,0 +1,1 @@
+$(".promo-item .cart").each(function(){var a=$(this).find(".text"),n=a.text().split("");a.html(""),$.each(n,function(n,p){" "==p&&a.append('<span class="space"></span>'),a.append("<span>"+p+"</span>")})});
