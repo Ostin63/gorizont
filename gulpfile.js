@@ -6,13 +6,14 @@ const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
 const less = require('gulp-less');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
  
 gulp.task('less', function () {
   gulp.src('./assets/less/*.less')
     .pipe(less())
-    .pipe(rename("less.min.css"))
+    .pipe(rename("main.css"))
+    .pipe(gulp.dest('./assets/css/'))
     .pipe(autoprefixer({
       browsers: ['last 10 versions'],
       cascade: false
