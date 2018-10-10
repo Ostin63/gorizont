@@ -663,22 +663,19 @@ main {
   transition: all 0.5s;
 }
 .promo-item .cart:hover {
-  margin-top: -40px;
-  margin-left: -20px;
+  transform: translate(-20px, -20px);
   background: #a9d5df url(../img/icon.png) 15% 50% no-repeat;
   transition: all 0.5s;
 }
 .promo-item .cart:focus {
-  margin-top: -40px;
-  margin-left: -20px;
+  transform: translate(-20px, -20px);
   background: #a9d5df url(../img/icon.png) 15% 50% no-repeat;
   transition: all 0.5s;
 }
 .promo-item .cart:active {
-  margin-top: 0;
-  margin-left: 0;
+  transform: translate(0, 0);
   box-shadow: 0px 0px 0px 0 rgba(41, 52, 73, 0.5);
-  background: #fff url(../img/icon.png) 15% 50% no-repeat;
+  background: rgba(0, 0, 0, 0.05) url(../img/icon.png) 15% 50% no-repeat;
 }
 .button {
   position: relative;
