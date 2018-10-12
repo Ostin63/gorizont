@@ -11,8 +11,8 @@ const imagemin = require('gulp-imagemin');
  
 gulp.task('less', function () {
   gulp.src('./assets/less/*.less')
-    .pipe(less())
-    .pipe(rename("main.css"))
+    .pipe(less('./assets/css/'))
+    .pipe(rename('main.css'))
     .pipe(gulp.dest('./assets/css/'))
     .pipe(autoprefixer({
       browsers: ['last 10 versions'],
@@ -29,11 +29,21 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-  gulp.src('./assets/css/*.css')
+  gulp.src('./assets/css/main.css')
     .pipe(cleanCSS())
+    .pipe(rename('main.min.css'))
     .pipe(gulp.dest('./public/css/'))
     .pipe(connect.reload());
 });
+
+gulp.task('normalize', function () {
+  gulp.src('./assets/css/normalize.css')
+    .pipe(cleanCSS())
+    .pipe(rename('normalize.min.css'))
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(connect.reload());
+});
+
 
 gulp.task('js', function () {
   gulp.src('./assets/js/*.js')
@@ -76,5 +86,5 @@ gulp.task('watch', function () {
   gulp.watch("./assets/less/*.less", ["less"]);
 });
 
-gulp.task('build', (callback) => runSequence('clean', ['html', 'css', 'less', 'js', 'img', 'fonts'], callback));
+gulp.task('build', (callback) => runSequence('clean', ['html', 'css', 'normalize', 'less', 'js', 'img', 'fonts'], callback));
 gulp.task('default', (callback) => runSequence('build', 'connect', 'watch', callback));

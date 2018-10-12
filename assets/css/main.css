@@ -28,6 +28,28 @@
   font-weight: 400;
   font-style: normal;
 }
+@keyframes animBackground {
+  from {
+    transform: translateY(-60%);
+  }
+  50% {
+    transform: translateY(60%);
+  }
+  to {
+    transform: translateY(-60%);
+  }
+}
+@keyframes animBack {
+  from {
+    transform: translateY(60%);
+  }
+  50% {
+    transform: translateY(-60%);
+  }
+  to {
+    transform: translateY(60%);
+  }
+}
 @-webkit-keyframes animCloud {
   from {
     -webkit-transform: translateX(100%);
@@ -178,6 +200,32 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+main {
+  position: relative;
+  background: linear-gradient(#fdfefd 30%, #fff 100%);
+  background: url(../img/background-block-2.png) 0 0 no-repeat;
+}
+main .cool {
+  top: 800px;
+  width: 1200px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .cool-text {
+  width: 345px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+main .cool-text-1 {
+  animation: animBackground 30s infinite linear;
+}
+main .cool-text-2 {
+  animation: animBack 30s infinite linear;
 }
 .main-header {
   background: linear-gradient(#aad5df 30%, #fffcfc 100%);
@@ -545,11 +593,6 @@ input::-ms-clear {
 .btn:hover .icon {
   transform: scale(10) rotate(90deg);
   opacity: 0;
-}
-main {
-  z-index: 1;
-  background: linear-gradient(#fdfefd 30%, #fff 100%);
-  background: url(../img/background-block-2.png) 0 0 no-repeat;
 }
 .promo-cite {
   position: relative;
