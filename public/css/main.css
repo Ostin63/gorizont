@@ -249,9 +249,10 @@ body {
 main {
   position: relative;
   background: #fdfefd;
-  background: -webkit-linear-gradient(#fdfefd 500px, #edeef0 680px);
-  background: -o-linear-gradient(#fdfefd 500px, #edeef0 680px);
-  background: linear-gradient(#fdfefd 500px, #edeef0 680px);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fdfefd), color-stop(60%, #edeef0));
+  background: -webkit-linear-gradient(#fdfefd 40%, #edeef0 60%);
+  background: -o-linear-gradient(#fdfefd 40%, #edeef0 60%);
+  background: linear-gradient(#fdfefd 40%, #edeef0 60%);
 }
 .main-header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #aad5df), to(#fffcfc));
@@ -1626,7 +1627,7 @@ input::-ms-clear {
   background: url(../img/line.svg) 0 0 no-repeat;
 }
 .main-footer {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
   font-size: 13px;
   line-height: 20px;
@@ -1640,7 +1641,11 @@ input::-ms-clear {
   justify-content: space-between;
   background-color: #fff;
 }
+.main-footer .copyright {
+  padding-top: 20px;
+}
 .main-footer .contacts {
+  margin-right: 80px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

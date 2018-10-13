@@ -85,7 +85,7 @@ formMain.addEventListener("submit", function (evt) {
 
   if (!yoursNameMain.value || !phoneMain.value) {
     phoneMain.classList.add("empty-value-error");
-    yoursNameMain.classList.add("empty-value-error")
+    yoursNameMain.classList.add("empty-value-error");
   } else {
     $.ajax({
       url: 'https://echo.htmlacademy.ru',
@@ -94,6 +94,8 @@ formMain.addEventListener("submit", function (evt) {
       success: function () {
         popupThank.classList.add("modal-visible");
         overLay.classList.add("modal-visible");
+        phoneMain.classList.remove("empty-value-error");
+        yoursNameMain.classList.remove("empty-value-error");
       }
     });
   }
@@ -105,7 +107,7 @@ formProject.addEventListener("submit", function (evt) {
   if (!yoursNameProject.value) {
     yoursNameProject.classList.add("empty-value-error")
   }
-  if (!phone.value) {
+  if (!phoneProject.value) {
     phoneProject.classList.add("empty-value-error")
   }
 
