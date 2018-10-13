@@ -112,6 +112,7 @@ formProject.addEventListener("submit", function (evt) {
   }
 
   if (!yoursNameProject.value || !phoneProject.value) {
+    
     popupProject.classList.remove("modal-error");
     popupProject.offsetWidth = popupProject.offsetWidth;
     popupProject.classList.add("modal-error");
