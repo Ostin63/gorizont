@@ -82,12 +82,41 @@
     transform: translateX(-100%);
   }
 }
-/*menu*/
-/**/
-/*social*/
-/**/
-/*text*/
-/*modal-1*/
+@keyframes myopacity {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes shake {
   0%,
   100% {
@@ -709,6 +738,7 @@ main {
   padding: 10px;
   padding-top: 12px;
   font-weight: 700;
+  transition: all 0.5s;
   text-transform: uppercase;
   text-decoration: none;
   color: #313a49;
@@ -720,12 +750,12 @@ main {
   left: 40px;
   width: 192px;
   height: 40px;
+  transition: all 0.5s;
   background: rgba(12, 125, 156, 0.3);
 }
 .button:hover::after {
   left: 0;
   width: 230px;
-  transition: all 0.5s;
   border: 1px solid rgba(0, 0, 0, 0);
   background: rgba(12, 125, 156, 0.3);
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -777,6 +807,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 .modal::before {
   content: "";
@@ -811,6 +842,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 .modal-name {
   text-align: center;
@@ -940,6 +972,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 .modal-project {
   display: none;
@@ -955,6 +988,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 .modal-visible {
   display: block;
@@ -1015,11 +1049,13 @@ main {
   flex-wrap: wrap;
 }
 .about-me .main-about-me .Jobs .Jobs-cart p {
+  transition: all 0.5s;
   background: #ffffff;
   box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
 }
 .about-me .main-about-me .Jobs .Jobs-cart p:hover,
 .about-me .main-about-me .Jobs .Jobs-cart p:focus {
+  transition: all 0.5s;
   box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
 }
 .about-me .main-about-me .Jobs h3 {
@@ -1055,10 +1091,12 @@ main {
   justify-content: center;
   align-items: center;
   background: #FEFEFE;
+  transition: all 0.5s;
   box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
 }
 .about-me .main-about-me .Jobs .jobs-banners .banners li p:hover,
 .about-me .main-about-me .Jobs .jobs-banners .banners li p:focus {
+  transition: all 0.5s;
   box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
 }
 .about-me .main-about-me .Jobs .jobs-banners .banners li:nth-child(2) {
@@ -1078,10 +1116,6 @@ main {
   display: block;
   width: 85px;
   padding-left: 40px;
-}
-.about-me .main-about-me .Jobs .jobs-banners .pagination-list li a img:hover,
-.about-me .main-about-me .Jobs .jobs-banners .pagination-list li a img:focus {
-  box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
 }
 .about-me .main-about-me .Jobs .jobs-banners .pagination-list li p {
   position: absolute;

@@ -119,17 +119,41 @@ sans-serif;
   }
 }
 
-/*menu*/
-
-/**/
-
-/*social*/
-
-/**/
-
-/*text*/
-
-/*modal-1*/
+@keyframes myopacity {
+  0% {
+    opacity: 0
+  }
+  10% {
+    opacity: .1
+  }
+  20% {
+    opacity: .2
+  }
+  30% {
+    opacity: .3
+  }
+  40% {
+    opacity: .4
+  }
+  50% {
+    opacity: .5
+  }
+  60% {
+    opacity: .6
+  }
+  70% {
+    opacity: .7
+  }
+  80% {
+    opacity: .8
+  }
+  90% {
+    opacity: .9
+  }
+  100% {
+    opacity: 1
+  }
+}
 
 @keyframes shake {
   0%,
@@ -801,6 +825,7 @@ main {
   padding: 10px;
   padding-top: 12px;
   font-weight: 700;
+  transition: all 0.5s;
   text-transform: uppercase;
   text-decoration: none;
   color: @color_6;
@@ -811,13 +836,13 @@ main {
     left: 40px;
     width: 192px;
     height: 40px;
+    transition: all 0.5s;
     background: rgba(12, 125, 156, 0.3);
   }
   &:hover {
     &::after {
       left: 0;
       width: 230px;
-      transition: all 0.5s;
       border: 1px solid rgba(0, 0, 0, 0);
       background: rgba(12, 125, 156, 0.3);
       box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -877,6 +902,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
   &::before {
     content: "";
     position: absolute;
@@ -912,6 +938,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 
 .modal-name {
@@ -1060,6 +1087,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 
 .modal-project {
@@ -1076,6 +1104,7 @@ main {
   box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
   box-sizing: border-box;
   z-index: 2;
+  animation: myopacity 1s;
 }
 
 .modal-visible {
@@ -1136,10 +1165,12 @@ main {
       flex-wrap: wrap;
       .Jobs-cart {
         p {
+          transition: all 0.5s;
           background: @background_color_8;
           box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
           &:hover,
           &:focus {
+            transition: all 0.5s;
             box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
           }
         }
@@ -1176,9 +1207,11 @@ main {
               justify-content: center;
               align-items: center;
               background: #FEFEFE;
+              transition: all 0.5s;
               box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
               &:hover,
               &:focus {
+                transition: all 0.5s;
                 box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
               }
             }
@@ -1199,12 +1232,6 @@ main {
               display: block;
               width: 85px;
               padding-left: 40px;
-              img {
-                &:hover,
-                &:focus {
-                  box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
-                }
-              }
             }
             p {
               position: absolute;
