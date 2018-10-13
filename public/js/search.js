@@ -13,7 +13,7 @@ let TLSrch = new TimelineLite({
   }
 });
 
-createTxt('Enter a search query', searchLbl, 'search-text');
+createTxt('Enter', searchLbl, 'search-text');
 searchTxt = document.querySelectorAll('.search-text');
 
 searchBtn.addEventListener('click', () => {
@@ -92,7 +92,7 @@ function animSearch() {
     .to(searchBtn, .4, { rotationX: 90, ease: Sine.easeIn }, '-=.4')
     .to(searchBrd, .4, { rotation: 180, x: '-=6', y: '+=10', ease: Power2.easeInOut })
     .set(searchBrd, { transformOrigin: '0', marginRight: '-38px' })
-    .to(searchBrd, .6, { scaleX: 13, ease: Power1.easeOut })
+    .to(searchBrd, .6, { scaleX: 38, ease: Power1.easeOut })
     .set(search, { className: '+=edge', onComplete: showTxt })
     .to(searchInp, .6, { scaleX: 1, ease: Sine.easeInOut }, '-=.3')
     .set(searchCls, { className: '+=visible' })
