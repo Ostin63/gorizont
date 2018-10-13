@@ -246,14 +246,6 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-main {
-  position: relative;
-  background: #fdfefd;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fdfefd), color-stop(60%, #edeef0));
-  background: -webkit-linear-gradient(#fdfefd 40%, #edeef0 60%);
-  background: -o-linear-gradient(#fdfefd 40%, #edeef0 60%);
-  background: linear-gradient(#fdfefd 40%, #edeef0 60%);
-}
 .main-header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #aad5df), to(#fffcfc));
   background: -webkit-linear-gradient(#aad5df 30%, #fffcfc 100%);
@@ -368,7 +360,7 @@ main {
   position: absolute;
   left: 25%;
   top: 20px;
-  height: 40%;
+  height: 30%;
   width: 15%;
   -webkit-transform: translate(-100vw, 0);
   -ms-transform: translate(-100vw, 0);
@@ -793,6 +785,13 @@ input::-ms-clear {
   -ms-transform: scale(10) rotate(90deg);
   transform: scale(10) rotate(90deg);
   opacity: 0;
+}
+main {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fdfefd), color-stop(55%, #edeef0));
+  background: -webkit-linear-gradient(#fdfefd 55%, #edeef0 55%);
+  background: -o-linear-gradient(#fdfefd 55%, #edeef0 55%);
+  background: linear-gradient(#fdfefd 55%, #edeef0 55%);
 }
 .promo-cite {
   position: relative;
