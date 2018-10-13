@@ -30,24 +30,24 @@
 }
 @keyframes animBackground {
   from {
-    transform: translateY(-60%);
+    transform: translateY(300px);
   }
   50% {
-    transform: translateY(60%);
+    transform: translateY(400px);
   }
   to {
-    transform: translateY(-60%);
+    transform: translateY(300px);
   }
 }
 @keyframes animBack {
   from {
-    transform: translateY(60%);
+    transform: translateY(-300px);
   }
   50% {
-    transform: translateY(-60%);
+    transform: translateY(-400px);
   }
   to {
-    transform: translateY(60%);
+    transform: translateY(-300px);
   }
 }
 @-webkit-keyframes animCloud {
@@ -203,29 +203,8 @@ body {
 }
 main {
   position: relative;
-  background: linear-gradient(#fdfefd 30%, #fff 100%);
-  background: url(../img/background-block-2.png) 0 0 no-repeat;
-}
-main .cool {
-  top: 800px;
-  width: 1200px;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-main .cool-text {
-  width: 345px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
-main .cool-text-1 {
-  animation: animBackground 30s infinite linear;
-}
-main .cool-text-2 {
-  animation: animBack 30s infinite linear;
+  background: #fdfefd;
+  background: linear-gradient(#fdfefd 500px, #edeef0 680px);
 }
 .main-header {
   background: linear-gradient(#aad5df 30%, #fffcfc 100%);
@@ -886,7 +865,7 @@ input::-ms-clear {
   font-size: 0;
   border: 0;
   cursor: pointer;
-  background: #fff;
+  background: #ffffff;
 }
 .modal-close::before {
   content: "";
@@ -936,7 +915,7 @@ input::-ms-clear {
   margin-top: 40px;
   margin-left: 50px;
   border: 0;
-  background: #fff;
+  background: #ffffff;
 }
 .modal-error {
   animation: shake 0.6s;
@@ -961,4 +940,249 @@ input::-ms-clear {
 }
 .modal-visible .overlay {
   display: block;
+}
+.about-me {
+  padding-left: 100px;
+  padding-right: 15px;
+  margin-top: 190px;
+  margin-bottom: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.about-me .cool {
+  width: 1200px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-me .cool-text {
+  width: 345px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me .cool-text-1 {
+  margin-left: -100px;
+  animation: animBackground 30s infinite linear;
+}
+.about-me .cool-text-2 {
+  animation: animBack 30s infinite linear;
+}
+.about-me .main-about-me {
+  position: relative;
+  width: 670px;
+}
+.about-me .main-about-me h2 {
+  position: absolute;
+  top: 250px;
+  left: -210px;
+  font-size: 40px;
+  font-family: Muller, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+}
+.about-me .main-about-me .Jobs {
+  width: 590px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-me .main-about-me .Jobs .Jobs-cart p {
+  background: #ffffff;
+  box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
+}
+.about-me .main-about-me .Jobs h3 {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.about-me .main-about-me .Jobs h3::after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: -30px;
+  width: 10px;
+  height: 107px;
+  background: url(../img/line.svg) 0 0 no-repeat;
+}
+.about-me .main-about-me .Jobs .jobs-banners {
+  width: 277px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.about-me .main-about-me .Jobs .jobs-banners .banners li {
+  margin-bottom: 45px;
+}
+.about-me .main-about-me .Jobs .jobs-banners .banners li p {
+  width: 277px;
+  height: 194px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FEFEFE;
+  box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
+}
+.about-me .main-about-me .Jobs .jobs-banners .banners li:nth-child(2) {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-me .main-about-me .Jobs .jobs-banners .pagination-list {
+  padding-left: 200px;
+}
+.about-me .main-about-me .Jobs .jobs-banners .pagination-list li {
+  position: relative;
+}
+.about-me .main-about-me .Jobs .jobs-banners .pagination-list li a {
+  display: block;
+  width: 85px;
+  padding-left: 40px;
+}
+.about-me .main-about-me .Jobs .jobs-banners .pagination-list li p {
+  position: absolute;
+  font-size: 11px;
+  top: -5px;
+  right: 20px;
+  text-transform: lowercase;
+}
+.about-me .main-about-me .Jobs .jobs-banners .pagination-list .pagination-item-current a {
+  padding-left: 0;
+}
+.about-me .main-about-me .Jobs .jobs-banners .pagination-list .pagination-item-current p {
+  top: 10px;
+  right: 15px;
+}
+.about-me .review {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+}
+.about-me .review .review-item {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me .review .review-item .review-name {
+  margin-left: 20px;
+}
+.about-me .review .review-item .review-name p {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 700;
+}
+.about-me .review .review-item .review-name span {
+  font-size: 12px;
+  line-height: 19px;
+}
+.about-me .review blockquote {
+  margin-bottom: 75px;
+  font-size: 11px;
+  line-height: 16px;
+}
+.about-me .review h3 {
+  text-align: right;
+  margin-bottom: 0;
+  padding-left: 145px;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about-me .review .button-socials {
+  margin-left: 300px;
+  width: 150px;
+  margin-bottom: 30px;
+  flex-direction: row;
+}
+.main-bottom {
+  position: relative;
+}
+.main-bottom h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-family: Muller, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main-bottom .cite {
+  width: 510px;
+}
+.main-bottom .feedback-form {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-bottom .feedback-form .feedback-item {
+  width: 295px;
+}
+.main-bottom .feedback-form .feedback {
+  margin-right: 180px;
+}
+.main-bottom .feedback-form .feedback .button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.main-bottom .feedback-form .feedback .feedback-checkbox {
+  margin-left: 15px;
+}
+.main-bottom .charter {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  transform: rotate(-90deg);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main-bottom .charter::after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 100px;
+  width: 10px;
+  height: 107px;
+  transform: rotate(90deg);
+  background: url(../img/line.svg) 0 0 no-repeat;
+}
+.main-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 13px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.main-footer .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-footer .contacts .button-socials {
+  width: 150px;
+  flex-direction: row;
+}
+.main-footer .contacts .contact {
+  display: flex;
+  flex-direction: column;
+}
+.main-footer .contacts .contact a {
+  text-decoration: none;
+  color: #333333;
 }

@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
+const validation = require('gulp-w3c-html-validation')
  
 gulp.task('less', function () {
   gulp.src('./assets/less/*.less')
