@@ -358,7 +358,8 @@ body {
       padding: 10px;
       color: @color_1;
       font-weight: 700;
-      &:hover {
+      &:hover,
+      &:focus {
         cursor: pointer;
         background-color: @background_color_2;
         background-color: @background_color_3;
@@ -411,7 +412,8 @@ body {
   display: block;
   width: 50px;
   height: 50px;
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
   }
   >i {
@@ -641,7 +643,8 @@ input {
     height: 18px;
     transition: all 0.4s ease-in-out;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     .hidden {
       left: 15px;
       top: 20px;
@@ -750,7 +753,8 @@ main {
       top: 0px;
       left: 0px;
       cursor: default;
-      &:hover {
+      &:hover,
+      &:focus {
         text-shadow: -8px 8px 0px #558B2F;
         transition: 0.3s;
         top: -8px;
@@ -814,6 +818,7 @@ main {
       left: 0;
       width: 230px;
       transition: all 0.5s;
+      border: 1px solid rgba(0, 0, 0, 0);
       background: rgba(12, 125, 156, 0.3);
       box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
     }
@@ -945,7 +950,8 @@ main {
     margin-top: 15px;
     padding: 15px;
     border: 2px solid #d7dcde;
-    &:hover {
+    &:hover,
+    &:focus {
       border: 2px solid #b4b9bb;
     }
   }
@@ -1132,6 +1138,10 @@ main {
         p {
           background: @background_color_8;
           box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
+          &:hover,
+          &:focus {
+            box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
+          }
         }
       }
       h3 {
@@ -1167,6 +1177,10 @@ main {
               align-items: center;
               background: #FEFEFE;
               box-shadow: 0px 10px 32px 0px rgba(49, 58, 73, 0.16);
+              &:hover,
+              &:focus {
+                box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
+              }
             }
           }
           li:nth-child(2) {
@@ -1185,13 +1199,19 @@ main {
               display: block;
               width: 85px;
               padding-left: 40px;
+              img {
+                &:hover,
+                &:focus {
+                  box-shadow: 0px 5px 10px 10px rgba(52, 59, 71, 0.16);
+                }
+              }
             }
             p {
               position: absolute;
               font-size: 11px;
               top: -5px;
               right: 20px;
-              text-transform: lowercase
+              text-transform: lowercase;
             }
           }
           .pagination-item-current {
