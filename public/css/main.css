@@ -1262,6 +1262,25 @@ input::-ms-clear {
   box-sizing: border-box;
   z-index: 2;
 }
+.modal-project {
+  display: none;
+  position: relative;
+  min-width: 660px;
+  min-height: 450px;
+  padding: 50px 80px;
+  position: fixed;
+  top: -webkit-calc(50% - 450px/2);
+  top: calc(50% - 450px/2);
+  left: -webkit-calc(50% - 660px/2);
+  left: calc(50% - 660px/2);
+  color: #000;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
+  box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 2;
+}
 .modal-visible {
   display: block;
 }

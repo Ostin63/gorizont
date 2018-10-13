@@ -935,6 +935,21 @@ input::-ms-clear {
   box-sizing: border-box;
   z-index: 2;
 }
+.modal-project {
+  display: none;
+  position: relative;
+  min-width: 660px;
+  min-height: 450px;
+  padding: 50px 80px;
+  position: fixed;
+  top: calc(-175%);
+  left: calc(-280%);
+  color: #000;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 5px rgba(41, 52, 73, 0.5);
+  box-sizing: border-box;
+  z-index: 2;
+}
 .modal-visible {
   display: block;
 }
