@@ -459,8 +459,7 @@ body {
 }
 .search-button {
   position: absolute;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px;
   right: 10px;
   bottom: 10px;
   width: 16px;
@@ -470,6 +469,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  box-sizing: border-box;
   transform: rotate(45deg);
 }
 .search-button::-moz-focus-inner {
@@ -753,7 +753,7 @@ main {
   position: absolute;
   top: 0;
   left: 40px;
-  width: 192px;
+  width: 226px;
   height: 40px;
   transition: all 0.5s;
   border: 1px solid rgba(255, 255, 255, 0);
@@ -766,7 +766,6 @@ main {
 .button:hover::after,
 .button:focus::after {
   left: 0px;
-  width: 240px;
   transition: all 0.5s;
   background: rgba(12, 125, 156, 0.3);
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -776,7 +775,6 @@ main {
 }
 .button:active::after {
   left: 0;
-  width: 230px;
   outline: none;
   background: rgba(131, 194, 211, 0.3);
   box-shadow: 0px 2px 2px 0 rgba(41, 52, 73, 0.5);
@@ -957,8 +955,11 @@ main {
 }
 .feedback-form .button {
   margin-top: 40px;
-  margin-left: 50px;
+  margin-left: 80px;
   border: 0;
+}
+.feedback-form .button::after {
+  width: 162px;
 }
 .modal-thank-you {
   display: none;
@@ -1181,7 +1182,12 @@ main {
   flex-direction: row;
 }
 .about-me .review .button {
-  margin: 0 auto;
+  margin-right: 137px;
+  margin-left: 137px;
+  box-sizing: border-box;
+}
+.about-me .review .button::after {
+  width: 176px;
 }
 .main-bottom {
   position: relative;
@@ -1216,6 +1222,9 @@ main {
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 0;
+}
+.main-bottom .feedback-form .feedback .button::after {
+  width: 162px;
 }
 .main-bottom .feedback-form .feedback .feedback-checkbox {
   margin-left: 15px;
