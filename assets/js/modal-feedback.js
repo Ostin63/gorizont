@@ -100,7 +100,7 @@ formMain.addEventListener("submit", function (evt) {
     });
   }
 });
-
+/*
 formProject.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
@@ -127,7 +127,7 @@ formProject.addEventListener("submit", function (evt) {
       }
     });
   }
-});
+});*/
 
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -181,6 +181,34 @@ formCons.addEventListener("submit", function (evt) {
         popupThank.classList.add("modal-visible");
         overLay.classList.add("modal-visible");
         popupCons.classList.remove("modal-visible");
+      }
+    });
+  }
+});
+
+formProject.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+
+  if (!yoursNameProject.value) {
+    yoursNameProject.classList.add("empty-value-error")
+  }
+  if (!phoneProject.value) {
+    phoneProject.classList.add("empty-value-error")
+  }
+
+  if (!yoursNameProject.value || !phoneProject.value) {
+    popupProject.classList.remove("modal-error");
+    popupProject.offsetWidth = popupProject.offsetWidth;
+    popupProject.classList.add("modal-error");
+  } else {
+    $.ajax({
+      url: 'https://echo.htmlacademy.ru',
+      type: 'post',
+      data: $(formProject).serialize(),
+      success: function () {
+        popupThank.classList.add("modal-visible");
+        overLay.classList.add("modal-visible");
+        popupProject.classList.remove("modal-visible");
       }
     });
   }
