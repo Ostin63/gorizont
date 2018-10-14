@@ -25,6 +25,7 @@ sans-serif;
 @background_color_8: #ffffff;
 @background_color_9: #bdb6b6;
 @background_color_10: #f51b1b;
+@background_color_11: rgba(255, 255, 255, 0);
 @font-face {
   font-family: "ProximaNova";
   src: url("../fonts/ProximaNovaCondensedBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Bold.woff") format("woff");
@@ -739,6 +740,9 @@ main {
     height: 107px;
     background: url(../img/line.svg) 0 0 no-repeat;
   }
+  .button {
+    margin-left: 110px;
+  }
 }
 
 .promo-item {
@@ -821,15 +825,16 @@ main {
 
 .button {
   position: relative;
-  margin-left: 110px;
   padding: 10px;
   padding-top: 12px;
   font-weight: 700;
   transition: all 0.5s;
   text-transform: uppercase;
   text-decoration: none;
-  color: @color_6;
   outline: none;
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: @color_6;
+  background: @background_color_11;
   &::after {
     content: "";
     position: absolute;
@@ -838,22 +843,15 @@ main {
     width: 192px;
     height: 40px;
     transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0);
     background: rgba(12, 125, 156, 0.3);
   }
-  &:hover {
-    &::after {
-      left: 0;
-      width: 230px;
-      outline: none;
-      background: rgba(12, 125, 156, 0.3);
-      box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
-    }
-  }
+  &:hover,
   &:focus {
     border: 0;
     &::after {
-      left: 40px;
-      width: 195px;
+      left: 0px;
+      width: 240px;
       outline: none;
       transition: all 0.5s;
       background: rgba(12, 125, 156, 0.3);
@@ -865,6 +863,7 @@ main {
     &::after {
       left: 0;
       width: 230px;
+      outline: none;
       background: rgba(131, 194, 211, 0.3);
       box-shadow: 0px 5px 10px 0 rgba(41, 52, 73, 0.5);
     }
@@ -1064,12 +1063,9 @@ main {
   width: 360px;
   margin: 0 auto;
   .button {
-    display: block;
-    margin: 0;
     margin-top: 40px;
     margin-left: 50px;
     border: 0;
-    background: @background_color_8;
   }
 }
 
@@ -1262,6 +1258,7 @@ main {
     width: 460px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     .review-item {
       margin-bottom: 30px;
       display: flex;
@@ -1300,6 +1297,9 @@ main {
       margin-bottom: 30px;
       flex-direction: row;
     }
+    .button {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -1324,12 +1324,15 @@ main {
       width: 295px;
     }
     .feedback {
-      margin-right: 180px;
+      margin-right: 150px;
+      width: 300px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       .button {
         margin-top: 20px;
         margin-bottom: 10px;
         margin-left: 0;
-        background-color: rgba(255, 255, 255, 0);
       }
       .feedback-checkbox {
         margin-left: 15px;
