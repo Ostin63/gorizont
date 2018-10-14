@@ -112,7 +112,6 @@ formProject.addEventListener("submit", function (evt) {
   }
 
   if (!yoursNameProject.value || !phoneProject.value) {
-    
     popupProject.classList.remove("modal-error");
     popupProject.offsetWidth = popupProject.offsetWidth;
     popupProject.classList.add("modal-error");
@@ -196,6 +195,14 @@ window.addEventListener("keydown", function (evt) {
     }
     if (popupCons.classList.contains("modal-visible")) {
       popupCons.classList.remove("modal-visible");
+      overLay.classList.remove("modal-visible");
+    }
+    if (popupProject.classList.contains("modal-visible")) {
+      popupProject.classList.remove("modal-visible");
+      overLay.classList.remove("modal-visible");
+    }
+    if (popupThank.classList.contains("modal-visible")) {
+      popupThank.classList.remove("modal-visible");
       overLay.classList.remove("modal-visible");
     }
   }
