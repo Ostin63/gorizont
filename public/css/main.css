@@ -1321,10 +1321,6 @@ main {
   margin-left: 50px;
   border: 0;
 }
-.modal-error {
-  -webkit-animation: shake 0.6s;
-  animation: shake 0.6s;
-}
 .modal-thank-you {
   display: none;
   position: relative;
@@ -1372,6 +1368,10 @@ main {
 }
 .modal-visible .overlay {
   display: block;
+}
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 .about-me {
   padding-left: 100px;

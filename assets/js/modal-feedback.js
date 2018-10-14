@@ -60,18 +60,27 @@ closeProject.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupProject.classList.remove("modal-visible");
   overLay.classList.remove("modal-visible");
+  phoneProject.classList.remove("empty-value-error");
+  yoursNameProject.classList.remove("empty-value-error");
+  popupProject.classList.remove("modal-error");
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-visible");
   overLay.classList.remove("modal-visible");
+  phone.classList.remove("empty-value-error");
+  yoursName.classList.remove("empty-value-error");
+  popup.classList.remove("modal-error");
 });
 
 closeCons.addEventListener("click", function (evt) {
   evt.preventDefault();
   overLay.classList.remove("modal-visible");
   popupCons.classList.remove("modal-visible");
+  phoneCons.classList.remove("empty-value-error");
+  yoursNameCons.classList.remove("empty-value-error");
+  popupCons.classList.remove("modal-error");
 });
 
 closeThank.addEventListener("click", function (evt) {
@@ -100,34 +109,6 @@ formMain.addEventListener("submit", function (evt) {
     });
   }
 });
-/*
-formProject.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-
-  if (!yoursNameProject.value) {
-    yoursNameProject.classList.add("empty-value-error")
-  }
-  if (!phoneProject.value) {
-    phoneProject.classList.add("empty-value-error")
-  }
-
-  if (!yoursNameProject.value || !phoneProject.value) {
-    popupProject.classList.remove("modal-error");
-    popupProject.offsetWidth = popupProject.offsetWidth;
-    popupProject.classList.add("modal-error");
-  } else {
-    $.ajax({
-      url: 'https://echo.htmlacademy.ru',
-      type: 'post',
-      data: $(formProject).serialize(),
-      success: function () {
-        popupThank.classList.add("modal-visible");
-        overLay.classList.add("modal-visible");
-        popupProject.classList.remove("modal-visible");
-      }
-    });
-  }
-});*/
 
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();

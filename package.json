@@ -2,9 +2,9 @@
   "name": "gorizont",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-w3c-html-validation": "0.0.1",
     "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-html-validator": "0.0.5"
   }
 }

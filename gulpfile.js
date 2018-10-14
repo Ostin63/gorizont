@@ -8,7 +8,14 @@ const autoprefixer = require('gulp-autoprefixer');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
-const validation = require('gulp-w3c-html-validation')
+const w3cValidation = require('gulp-w3c-html-validation');
+
+gulp.task('w3c', function () {
+  return gulp.src('public/**/*.html')
+    .pipe(w3cValidation({
+      //generateCheckstyleReport: 'w3cErrors/validation.xml'
+    }))
+});
  
 gulp.task('less', function () {
   gulp.src('./assets/less/*.less')
@@ -24,13 +31,13 @@ gulp.task('less', function () {
 });
 
 gulp.task('html', function () {
-  gulp.src('./assets/*.html')
+  return gulp.src('./assets/*.html')
     .pipe(gulp.dest('./public/'))
     .pipe(connect.reload());
 });
 
 gulp.task('css', function () {
-  gulp.src('./assets/css/main.css')
+  return gulp.src('./assets/css/main.css')
     .pipe(cleanCSS())
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('./public/css/'))
@@ -38,7 +45,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('normalize', function () {
-  gulp.src('./assets/css/normalize.css')
+  return gulp.src('./assets/css/normalize.css')
     .pipe(cleanCSS())
     .pipe(rename('normalize.min.css'))
     .pipe(gulp.dest('./public/css/'))
@@ -47,20 +54,20 @@ gulp.task('normalize', function () {
 
 
 gulp.task('js', function () {
-  gulp.src('./assets/js/*.js')
+  return gulp.src('./assets/js/*.js')
     .pipe(minify())
     .pipe(gulp.dest('./public/js/'))
     .pipe(connect.reload());
 });
 
 gulp.task('fonts', function () {
-  gulp.src('./assets/fonts/*')
+  return gulp.src('./assets/fonts/*')
     .pipe(gulp.dest('./public/fonts/'))
     .pipe(connect.reload());
 });
 
 gulp.task('img', function () {
-  gulp.src('./assets/img/**/*')
+  return gulp.src('./assets/img/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./public/img/'))
     .pipe(connect.reload());
@@ -87,5 +94,5 @@ gulp.task('watch', function () {
   gulp.watch("./assets/less/*.less", ["less"]);
 });
 
-gulp.task('build', (callback) => runSequence('clean', ['html', 'css', 'normalize', 'less', 'js', 'img', 'fonts'], callback));
+gulp.task('build', (callback) => runSequence('clean', ['html', 'css', 'normalize', 'less', 'js', 'img', 'fonts'], 'w3c' , callback));
 gulp.task('default', (callback) => runSequence('build', 'connect', 'watch', callback));
