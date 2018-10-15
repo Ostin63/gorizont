@@ -29,9 +29,9 @@
             <div class="drawer-list">
               <ul>
                 <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Наши проекты</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#block-2">О нас</a></li>
+                <li><a href="#block-3">Наши проекты</a></li>
+                <li><a href="#block-4">Контакты</a></li>
               </ul>
             </div>
           </div>
@@ -136,7 +136,7 @@
             </a>
           </div>
         </div>
-        <a class="scroll" href="#section-1">
+        <a class="scroll" href="#block-2">
           <img src="img/icon-mouse.png" alt="mouse">
           <p>scroll</p>
         </a>
@@ -148,8 +148,8 @@
     <section class="promo-cite container">
       <div class="promo">
         <div class="main-promo">
-          <h2 id="section-1">Кто мы?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          <h2>Кто мы?</h2>
+          <p id="block-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo
@@ -273,7 +273,7 @@
             </p>
             <p class="feedback-item">
               <label for="phone"><span class="visually-hidden">Телефон</span></label>
-              <input class="form-phone" type="text" name="phone" id="phone" placeholder="Ваш телефон">
+              <input class="form-phone" type="text" name="phone" id="phone" placeholder="+7 (___) ___ - __ - __">
             </p>
             <button class="button thank-you" type="submit"><span>Оставить</span> заявку</button>
             <button class="modal-close"></button>
@@ -293,7 +293,7 @@
             </p>
             <p class="feedback-item">
               <label for="#phone"><span class="visually-hidden">Телефон</span></label>
-              <input class="form-phone" type="text" name="phone" id="#phone" placeholder="Ваш телефон">
+              <input class="form-phone" type="text" name="phone" id="#phone" placeholder="+7 (___) ___ - __ - __">
             </p>
             <button class="button thank-you" type="submit"><span>Оставить</span> заявку</button>
             <button class="modal-close"></button>
@@ -311,7 +311,7 @@
       </section>
 
       <section class="about-me">
-        <h2 class="visually-hidden"> О нас</h2>
+        <h2 class="visually-hidden" id="block-3"> О нас</h2>
         <div class="cool">
           <p class="cool-text cool-text-1"><img src="img/expenses.png" alt="text"></p>
           <p class="cool-text cool-text-2"><img src="img/expenses.png" alt="text"></p>
@@ -447,7 +447,7 @@
               </p>
               <p class="feedback-item">
                 <label for="project-phone"><span class="visually-hidden">Телефон</span></label>
-                <input class="form-phone" type="text" name="phone" id="project-phone" placeholder="Ваш телефон">
+                <input class="form-phone" type="text" name="phone" id="project-phone" placeholder="+7 (___) ___ - __ - __">
               </p>
               <button class="button thank-you" type="submit"><span>Оставить</span> заявку</button>
               <button class="modal-close"></button>
@@ -465,7 +465,7 @@
           </p>
           <p class="feedback-item">
             <label for="main-phone"><span class="visually-hidden">Телефон</span></label>
-            <input class="form-phone" type="text" name="phone" id="main-phone" placeholder="Ваш телефон">
+            <input class="form-phone" type="text" name="phone" id="main-phone" placeholder="+7 (___) ___ - __ - __">
           </p>
           <p class="feedback">
             <button class="button button-request" type="submit"><span>Оставить</span> заявку</button>
@@ -481,7 +481,7 @@
     </section>
   </main>
   <footer class="container">
-    <div class="main-footer">
+    <div class="main-footer" id="block-4">
       <section class="copyright">
         <h2 class="visually-hidden">Копирайт</h2>
         <p>2017 Horizon - Digital агентство полного цикла</p>
@@ -564,7 +564,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/search-min.js"></script>
-  <script src="js/modal-feedback.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/modal-feedback-min.js"></script>
   <script src="js/main-min.js"></script>
 
 </body>

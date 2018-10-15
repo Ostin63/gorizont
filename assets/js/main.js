@@ -11,3 +11,5 @@ $('.promo-item .cart').each(function(){
     $text.append('<span>' + v + '</span>');
   });
 });
+
+$(".form-phone").mask("+7(999)999-99-99");

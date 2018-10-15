@@ -1,1 +1,1 @@
-$(".promo-item .cart").each(function(){var a=$(this).find(".text"),n=a.text().split("");a.html(""),$.each(n,function(n,p){" "==p&&a.append('<span class="space"></span>'),a.append("<span>"+p+"</span>")})});
+$(".promo-item .cart").each(function(){var a=$(this).find(".text"),n=a.text().split("");a.html(""),$.each(n,function(n,p){" "==p&&a.append('<span class="space"></span>'),a.append("<span>"+p+"</span>")})}),$(".form-phone").mask("+7(999)999-99-99");
